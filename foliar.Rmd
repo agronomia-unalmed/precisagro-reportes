@@ -1,4 +1,3 @@
-
 ---
 title: "Reporte de Análisis Foliar"
 output:
@@ -6,14 +5,16 @@ output:
     theme: flatly
     toc: true
     toc_float: true
+    includes:
+      in_header: header.html
 ---
 
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(knitr)
 
-datos <- read.csv("../data/resultados.csv", stringsAsFactors=FALSE)
-rangos <- read.csv("../data/rangos.csv", stringsAsFactors=FALSE)
+datos <- read.csv("./data/resultados.csv", stringsAsFactors=FALSE)
+rangos <- read.csv("./data/rangos.csv", stringsAsFactors=FALSE)
 
 
 
@@ -32,16 +33,16 @@ datos_long <- datos |>
    Etiqueta=paste0(substr(Finca,1,3),"-",Lote)
  )
 
-anio_actual <- max(datos_long$Año)
+anio_actual <- max(datos_long$Anio)
 
 datos_actual <- datos_long |>
-  filter(Año == anio_actual)
+  filter(Anio == anio_actual)
 
 comparacion <- datos_long |>
   select(
     Finca,
     Lote,
-    Año,
+    Anio,
     Nutriente,
     Valor,
     Min,
@@ -191,7 +192,7 @@ graficar_comparacion <- function(df){
     aes(
       x = Etiqueta,
       y = Valor,
-      fill = factor(Año)
+      fill = factor(Anio)
     )
   )
 

@@ -1,0 +1,20 @@
+﻿Nutriente,Min,Max
+N_Dumas,2.5,3.4
+Fosforo,0.2,0.25
+Azufre,0.2,0.28
+Cloruros,0,12000
+Calcio,0.55,0.9
+Magnesio,0.25,0.37
+Potasio,3.4,4
+Sodio,,
+Boro,15,50
+Hierro,75,250
+Manganeso,25,1000
+Cobre,3,12
+Zinc,20,100
+Molibdeno,1.5,3
+Aluminio,,
+Sat_Ca,15,20
+Sat_Mg,7,15
+Sat_K,55,75
+Suma Bases,,
