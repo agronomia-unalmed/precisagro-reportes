@@ -1,5 +1,5 @@
 ---
-title: "AgritecGeo"
+title: "AgritecGEO"
 output:
   html_document:
     theme: flatly
@@ -99,7 +99,7 @@ body{
 
 <img src="img/logo.png">
 
-# Plataforma de Reportes Técnicos
+# Plataforma de Reportes Técnicos - AGROTES
 
 Evaluación nutricional y análisis de laboratorio
 
@@ -131,7 +131,7 @@ Resultados de laboratorio, interpretación de fertilidad y seguimiento históric
 
 <div class="footer">
 
-AgritecGeo © `r format(Sys.Date(), "%Y")`
+AgritecGEO © `r format(Sys.Date(), "%Y")`
 
 <br>
 
