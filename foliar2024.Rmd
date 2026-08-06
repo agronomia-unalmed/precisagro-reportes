@@ -1,0 +1,94 @@
+---
+title: ""
+output:
+  html_document:
+    theme: flatly
+    toc: false
+---
+
+<div>
+
+# Resultados Foliares 2024
+
+Consulta de los análisis históricos.
+
+</div>
+
+<div>
+
+<a href="index.html"
+class="btn btn-success">
+
+🏠 Portal
+
+</a>
+
+</div>
+
+</div>
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(DT)
+library(crosstalk)
+
+datos <- read.csv("./data/resultados_2024.csv",
+                  stringsAsFactors = FALSE)
+
+datos_shared <- SharedData$new(datos)
+```
+
+
+
+```{r tabla, echo=FALSE, message=FALSE, warning=FALSE}
+
+bscols(
+
+  widths = c(4,4,4),
+
+  filter_select(
+    "finca",
+    "Finca",
+    datos_shared,
+    ~Finca
+  ),
+
+  filter_select(
+    "lote",
+    "Lote",
+    datos_shared,
+    ~Lote
+  )
+
+)
+
+
+datatable(datos_shared,
+
+  filter = "top",
+
+  extensions = "Buttons",
+
+  rownames = FALSE,
+
+  options = list(
+
+    pageLength = 15,
+
+    scrollX = TRUE,
+
+    autoWidth = TRUE,
+
+    dom = "Bfrtip",
+
+    buttons = c(
+      "copy",
+      "csv",
+      "excel"
+    )
+
+  )
+)
+```
+

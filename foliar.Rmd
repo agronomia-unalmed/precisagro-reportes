@@ -9,6 +9,17 @@ output:
       in_header: header.html
 ---
 
+<div style="text-align:right; margin-bottom:25px;">
+
+<a href="index.html"
+class="btn btn-success">
+
+🏠 Volver al portal
+
+</a>
+
+</div>
+
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(knitr)
@@ -345,12 +356,25 @@ print(knitr::kable(
 select(df,Finca, Fecha, Lote,Valor,Min,Max,Estado),
 digits=2))
 
-df_comp <- comparacion |>
-  filter(Nutriente == nut)
+#cat("\n\n### Comparación con el año anterior\n\n")
 
-cat("\n\n### Comparación con el año anterior\n\n")
+#df_comp <- comparacion |>
+#  filter(Nutriente == nut)
 
-print(graficar_comparacion(df_comp))
+# ¿Hay más de un año con datos?
+#n_anios <- df_comp |>
+#  filter(!is.na(Valor)) |>
+#  distinct(Anio) |>
+#  nrow()
 
+#if(n_anios >= 2){
+
+#  print(graficar_comparacion(df_comp))
+
+#} else {
+
+#  cat("> **No existen datos históricos suficientes para realizar la comparación.**\n\n")
+
+#}
 }
 ```

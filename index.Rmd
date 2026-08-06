@@ -1,5 +1,5 @@
 ---
-title: "AgritecGEO"
+title: ""
 output:
   html_document:
     theme: flatly
@@ -109,13 +109,27 @@ Evaluación nutricional y análisis de laboratorio
 
 <a href="foliar.html">
 
-# 🌿 Análisis Foliares
+# 🌿 Análisis Foliares 2026
 
 Visualización de resultados foliares, comparación entre años y evaluación respecto a rangos críticos.
 
 </a>
 
 </div>
+
+
+<div class="card">
+
+<a href="foliar2024.html">
+
+# 📄 Análisis Foliares 2024
+
+Consulta de los resultados completos de laboratorio correspondientes al año 2024.
+
+</a>
+
+</div>
+
 
 <div class="card">
 
